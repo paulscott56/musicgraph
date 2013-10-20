@@ -1,5 +1,7 @@
 package za.co.paulscott.musicgraph.entities.artist;
 
+import java.util.Date;
+
 /**
  * For artists
  * The begin and end dates indicate when an artist started and finished its existence. 
@@ -54,5 +56,23 @@ package za.co.paulscott.musicgraph.entities.artist;
  *
  */
 public class ArtistDate {
+	
+	private Date beginDate;
+	private Date endDate;
+	
+	public Date getBeginDate() {
+		return beginDate;
+	}
+	public void setBeginDate(Date beginDate) {
+		this.beginDate = beginDate;
+	}
+	public Date getEndDate() {
+		return endDate;
+	}
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
+	}
+	
+	
 
 }

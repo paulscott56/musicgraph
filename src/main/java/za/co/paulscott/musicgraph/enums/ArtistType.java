@@ -1,4 +1,4 @@
-package za.co.paulscott.musicgraph.entities.artist;
+package za.co.paulscott.musicgraph.enums;
 
 /**
  * The type is used to explicitly state whether an artist is a person or group.

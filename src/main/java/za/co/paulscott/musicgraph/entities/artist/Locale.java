@@ -1,11 +1,11 @@
 package za.co.paulscott.musicgraph.entities.artist;
 
 /**
- * This should follow the geonames db...
+ * Locales for aliases
  * 
  * @author paul
  *
  */
-public class Country {
+public class Locale {
 
 }

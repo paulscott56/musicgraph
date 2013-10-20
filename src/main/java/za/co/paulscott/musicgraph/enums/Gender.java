@@ -1,4 +1,4 @@
-package za.co.paulscott.musicgraph.entities.artist;
+package za.co.paulscott.musicgraph.enums;
 
 /**
  * The gender is used to explicitly state whether a person identifies as male, female or neither. 

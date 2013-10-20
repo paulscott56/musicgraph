@@ -2,6 +2,10 @@ package za.co.paulscott.musicgraph.entities.artist;
 
 import java.util.Set;
 
+import za.co.paulscott.musicgraph.entities.geo.Country;
+import za.co.paulscott.musicgraph.enums.ArtistType;
+import za.co.paulscott.musicgraph.enums.Gender;
+
 /**
  * Artist schema
  * 
@@ -77,7 +81,7 @@ public class Artist {
 	private ArtistDate            beginDate;
 	private ArtistDate            endDate;
 	private IPICode               ipiCode;
-	private ArtistAlias           alias;
+	private Set<ArtistAlias>      alias;
 	private String                mbId;
 	private DisambiguationComment disAmbComment;
 	private ArtistAnnotation      annotation;
@@ -142,12 +146,6 @@ public class Artist {
 	public void setIpiCode(IPICode ipiCode) {
 		this.ipiCode = ipiCode;
 	}
-	public ArtistAlias getAlias() {
-		return alias;
-	}
-	public void setAlias(ArtistAlias alias) {
-		this.alias = alias;
-	}
 	public String getMbId() {
 		return mbId;
 	}
@@ -165,6 +163,12 @@ public class Artist {
 	}
 	public void setAnnotation(ArtistAnnotation annotation) {
 		this.annotation = annotation;
+	}
+	public Set<ArtistAlias> getAlias() {
+		return alias;
+	}
+	public void setAlias(Set<ArtistAlias> alias) {
+		this.alias = alias;
 	}
 	
 }
