@@ -8,9 +8,11 @@ import za.co.paulscott.musicgraph.hello.HelloWorld;
 
 public class App {
 
+	private static ApplicationContext context;
+
 	public static void main(String[] args) {
 
-		ApplicationContext context = new AnnotationConfigApplicationContext(
+		context = new AnnotationConfigApplicationContext(
 				AppConfig.class);
 		HelloWorld obj = (HelloWorld) context.getBean("helloBean");
 
