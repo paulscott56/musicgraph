@@ -76,5 +76,12 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- Neo4j -->
+		<dependency>
+			<groupId>org.neo4j</groupId>
+			<artifactId>neo4j</artifactId>
+			<version>1.9.4</version>
+		</dependency>
+
 	</dependencies>
 </project>

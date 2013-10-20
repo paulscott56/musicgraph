@@ -14,9 +14,4 @@ public class AppConfig {
 		return new HelloWorldImpl();
 	}
 	
-	@Bean
-	public Something something() {
-		return null;
-	}
-
 }
