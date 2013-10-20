@@ -13,5 +13,10 @@ public class AppConfig {
 	public HelloWorld helloWorld() {
 		return new HelloWorldImpl();
 	}
+	
+	@Bean
+	public Something something() {
+		return null;
+	}
 
 }
