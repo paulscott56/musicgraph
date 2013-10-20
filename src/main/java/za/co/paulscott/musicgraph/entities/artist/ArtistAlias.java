@@ -1,5 +1,7 @@
 package za.co.paulscott.musicgraph.entities.artist;
 
+import za.co.paulscott.musicgraph.enums.ArtistAliasType;
+
 /**
  * Localised names
  * 
@@ -90,6 +92,8 @@ public class ArtistAlias {
 	private String alias;
 	
 	private Locale locale;
+	
+	private ArtistAliasType type;
 
 	public String getAlias() {
 		return alias;
@@ -105,6 +109,14 @@ public class ArtistAlias {
 
 	public void setLocale(Locale locale) {
 		this.locale = locale;
+	}
+
+	public ArtistAliasType getType() {
+		return type;
+	}
+
+	public void setType(ArtistAliasType type) {
+		this.type = type;
 	}
 	
 }
