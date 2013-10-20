@@ -1,6 +1,5 @@
 package za.co.paulscott.musicgraph.entities.artist;
 
-import java.util.Date;
 import java.util.Set;
 
 /**
@@ -55,7 +54,7 @@ import java.util.Set;
  * nicknames or even misspellings. 
  * 
  * MBID
- * Simple identifier.
+ * Simple identifier UUID on MB db.
  * 
  * Disambiguation comment
  * See comments class for more information.
@@ -68,20 +67,20 @@ import java.util.Set;
  */
 public class Artist {
 	
-	private String artistName;
-	private String legalName;
-	private Set<String> performanceName;
-	private String sortName;
-	private ArtistType type;
-	private Gender gender;
-	private Country country;
-	private ArtistDate beginDate;
-	private ArtistDate endDate;
-	private IPICode ipiCode;
-	private ArtistAlias alias;
-	private String mbId;
+	private String                artistName;
+	private String                legalName;
+	private Set<String>           performanceName;
+	private String                sortName;
+	private ArtistType            type;
+	private Gender                gender;
+	private Country               country;
+	private ArtistDate            beginDate;
+	private ArtistDate            endDate;
+	private IPICode               ipiCode;
+	private ArtistAlias           alias;
+	private String                mbId;
 	private DisambiguationComment disAmbComment;
-	private ArtistAnnotation annotation;
+	private ArtistAnnotation      annotation;
 	
 	public String getArtistName() {
 		return artistName;
