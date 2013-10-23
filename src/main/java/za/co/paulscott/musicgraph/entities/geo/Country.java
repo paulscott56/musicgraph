@@ -1,5 +1,7 @@
 package za.co.paulscott.musicgraph.entities.geo;
 
+import za.co.paulscott.musicgraph.enums.Locale;
+
 /**
  * A country should be a node, with all places in that country as sub nodes.
  * Hopefully that will enable easy traversal from specific places to country and vice versa
@@ -9,7 +11,7 @@ package za.co.paulscott.musicgraph.entities.geo;
  */
 public class Country {
 
-	    private String isoCode;
+	    private Locale isoCode;
 	    private String iso3Code;
 	    private int isoNumericCode;
 	    private String fips;
@@ -28,11 +30,11 @@ public class Country {
 	    private String neighbours;
 	    private String equivalentFipsCode;
 	    
-		public String getIsoCode() {
+		public Locale getIsoCode() {
 			return isoCode;
 		}
 		
-		public void setIsoCode(String isoCode) {
+		public void setIsoCode(Locale isoCode) {
 			this.isoCode = isoCode;
 		}
 		

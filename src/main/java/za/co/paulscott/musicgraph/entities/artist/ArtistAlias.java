@@ -1,7 +1,6 @@
 package za.co.paulscott.musicgraph.entities.artist;
 
 import za.co.paulscott.musicgraph.enums.ArtistAliasType;
-import za.co.paulscott.musicgraph.enums.Locale;
 
 /**
  * Localised names
