@@ -1,4 +1,4 @@
-package za.co.paulscott.musicgraph.entities.artist;
+package za.co.paulscott.musicgraph.entities.shared;
 
 /**
  * The disambiguation comments are fields in the database used to help distinguish identically named artists, 

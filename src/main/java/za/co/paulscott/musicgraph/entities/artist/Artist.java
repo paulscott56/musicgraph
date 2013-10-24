@@ -3,6 +3,8 @@ package za.co.paulscott.musicgraph.entities.artist;
 import java.util.Set;
 
 import za.co.paulscott.musicgraph.entities.geo.Country;
+import za.co.paulscott.musicgraph.entities.shared.SimpleAnnotation;
+import za.co.paulscott.musicgraph.entities.shared.DisambiguationComment;
 import za.co.paulscott.musicgraph.enums.ArtistType;
 import za.co.paulscott.musicgraph.enums.Gender;
 
@@ -84,7 +86,7 @@ public class Artist {
 	private Set<ArtistAlias>      alias;
 	private String                mbId;
 	private DisambiguationComment disAmbComment;
-	private ArtistAnnotation      annotation;
+	private SimpleAnnotation      annotation;
 	
 	public String getArtistName() {
 		return artistName;
@@ -158,10 +160,10 @@ public class Artist {
 	public void setDisAmbComment(DisambiguationComment disAmbComment) {
 		this.disAmbComment = disAmbComment;
 	}
-	public ArtistAnnotation getAnnotation() {
+	public SimpleAnnotation getAnnotation() {
 		return annotation;
 	}
-	public void setAnnotation(ArtistAnnotation annotation) {
+	public void setAnnotation(SimpleAnnotation annotation) {
 		this.annotation = annotation;
 	}
 	public Set<ArtistAlias> getAlias() {

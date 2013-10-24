@@ -1,4 +1,6 @@
-package za.co.paulscott.musicgraph.entities.artist;
+package za.co.paulscott.musicgraph.entities.shared;
+
+import za.co.paulscott.musicgraph.enums.AnnotationType;
 
 /**
  * Annotations are text fields, functioning like a miniature wiki, 
@@ -35,9 +37,19 @@ package za.co.paulscott.musicgraph.entities.artist;
  * @author paul
  *
  */
-public class ArtistAnnotation {
+public class SimpleAnnotation {
 	
 	private String annotation;
+	private AnnotationType type;
+	
+
+	public AnnotationType getType() {
+		return type;
+	}
+
+	public void setType(AnnotationType type) {
+		this.type = type;
+	}
 
 	public String getAnnotation() {
 		return annotation;
