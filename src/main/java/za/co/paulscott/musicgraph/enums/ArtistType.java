@@ -8,6 +8,6 @@ package za.co.paulscott.musicgraph.enums;
  */
 public enum ArtistType {
 
-	Person,
-	Group
+	PERSON,
+	GROUP
 }

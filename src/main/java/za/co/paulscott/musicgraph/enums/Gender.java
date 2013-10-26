@@ -9,7 +9,7 @@ package za.co.paulscott.musicgraph.enums;
  */
 public enum Gender {
 
-	Male,
-	Female,
-	Other
+	MALE,
+	FEMALE,
+	OTHER
 }
