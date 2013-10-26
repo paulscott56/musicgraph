@@ -1,4 +1,4 @@
-package za.co.paulscott.musicgraph.entities.artist;
+package za.co.paulscott.musicgraph.entities.shared;
 
 import java.util.Set;
 
@@ -19,9 +19,9 @@ import java.util.Set;
 public class ISWCCode {
 
 	private String title;
-	private Set composers;
+	private Set<String> composers;
 	private String cisCode;
-	private Set derivativeWorks;
+	private Set<String> derivativeWorks;
 	
 	public String getTitle() {
 		return title;
@@ -29,10 +29,10 @@ public class ISWCCode {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public Set getComposers() {
+	public Set<String> getComposers() {
 		return composers;
 	}
-	public void setComposers(Set composers) {
+	public void setComposers(Set<String> composers) {
 		this.composers = composers;
 	}
 	public String getCisCode() {
@@ -41,10 +41,10 @@ public class ISWCCode {
 	public void setCisCode(String cisCode) {
 		this.cisCode = cisCode;
 	}
-	public Set getDerivativeWorks() {
+	public Set<String> getDerivativeWorks() {
 		return derivativeWorks;
 	}
-	public void setDerivativeWorks(Set derivativeWorks) {
+	public void setDerivativeWorks(Set<String> derivativeWorks) {
 		this.derivativeWorks = derivativeWorks;
 	}
 	

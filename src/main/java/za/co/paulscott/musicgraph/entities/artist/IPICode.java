@@ -1,5 +1,7 @@
 package za.co.paulscott.musicgraph.entities.artist;
 
+import za.co.paulscott.musicgraph.entities.shared.ISWCCode;
+
 /**
  * The Interested Parties Information Code (IPI) is an identifying number assigned in the 
  * CISAC database to each Interested Party in musical rights management.
