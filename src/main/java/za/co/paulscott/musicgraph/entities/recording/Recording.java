@@ -40,6 +40,20 @@ public class Recording {
 	/**
 	 * ISRC
 	 * The International Standard Recording Code assigned to the recording.
+	 * 
+	 * The ISRC is a 12-byte alphanumeric string (only uppercase latin letters and arabic numerals, [A-Z0-9]) 
+	 * of the form CCOOOYYSSSSS with
+	 * C a 2-character country code (containing only letters) as defined in ISO 3166-1
+	 * O a 3-character owner code (containing letters and/or digits)
+	 * Y a 2-character year code (containing only digits)
+	 * S a 5-character serial number (containing only digits). 
+	 * 
+	 * Determining ISRCs of recordings
+     * On compact discs, ISRC codes can be stored in subchannel Q.
+     * Such codes can be read with applications like Ahead's Nero and Exact Audio Copy (EAC) and now also using libdiscid. 
+     * Occasionally, ISRCs are printed on the cover or in the booklet of a release. 
+     * Some collection societies such as SCPP and CISAC will also disclose ISRCs in their online catalogue 
+     * although there is no legal or industry requirement to do so. 
 	 */
 	private String isrcString;
 
