@@ -11,6 +11,14 @@
         <class>za.co.paulscott.musicgraph.entities.artist.ArtistDate</class>
         <class>za.co.paulscott.musicgraph.entities.artist.IPICode</class>
         <class>za.co.paulscott.musicgraph.entities.artist.SpecificLocale</class>
+        <class>za.co.paulscott.musicgraph.entities.geo.Country</class>
+        <class>za.co.paulscott.musicgraph.entities.label.MusicLabel</class>
+        <class>za.co.paulscott.musicgraph.entities.recording.Recording</class>
+        <class>za.co.paulscott.musicgraph.entities.release.Release</class>
+        <class>za.co.paulscott.musicgraph.entities.releasegroup.ReleaseGroup</class>
+        <class>za.co.paulscott.musicgraph.entities.shared.DisambiguationComment</class>
+        <class>za.co.paulscott.musicgraph.entities.shared.ISWCCode</class>
+        <class>za.co.paulscott.musicgraph.entities.shared.SimpleAnnotation</class>
         <properties>            
             <property name="kundera.nodes" value="localhost" />
             <property name="kundera.port" value="7474" />
