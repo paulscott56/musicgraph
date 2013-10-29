@@ -1,10 +1,5 @@
 package za.co.paulscott.musicgraph.entities.geo;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Column;
-
 import za.co.paulscott.musicgraph.enums.Locale;
 
 /**
@@ -15,67 +10,57 @@ import za.co.paulscott.musicgraph.enums.Locale;
  * @author paul
  * 
  */
-
-@Entity
-@Table
 public class Country {
 
-	@Id
-	@Column(name = "id")
+
 	private int id;
 
-	@Column(name = "isocode")
+	
 	private Locale isoCode;
 	
-	@Column(name = "iso3code")
+	
 	private String iso3Code;
 	
-	@Column(name = "isonumericCode")
+	
 	private int isoNumericCode;
 	
-	@Column(name = "fips")
+	
 	private String fips;
 	
-	@Column(name = "country")
+	
 	private String country;
 	
-	@Column(name = "capital")
+	
 	private String capital;
 	
-	@Column(name = "area")
+	
 	private int area; // (in sq km)
 	
-	@Column(name = "population")
+	
 	private int population;
 	
-	@Column(name = "continent")
+	
 	private String continent;
 	
-	@Column(name = "tld")
+	
 	private String tld;
 	
-	@Column(name = "currencyCode")
+	
 	private String currencyCode;
 	
-	@Column(name = "currencyName")
+	
 	private String currencyName;
 	
-	@Column(name = "phone")
 	private String phone;
 	
-	@Column(name = "postalcodeFormat")
 	private String postalCodeFormat;
 	
-	@Column(name = "postalCodeRegex")
 	private String postalCodeRegex;
 	
-	@Column(name = "languages")
 	private String languages;
 	
-	@Column(name = "neighbours")
 	private String neighbours;
 	
-	@Column(name = "equivalentFipsCode")
 	private String equivalentFipsCode;
 
 	public Locale getIsoCode() {
