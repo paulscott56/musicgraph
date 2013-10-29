@@ -206,4 +206,12 @@ public class Country {
 	public void setEquivalentFipsCode(String equivalentFipsCode) {
 		this.equivalentFipsCode = equivalentFipsCode;
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 }
