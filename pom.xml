@@ -136,12 +136,20 @@
 		</dependency>
 
 	</dependencies>
+<<<<<<< HEAD
 
 	<repositories>
 		<repository>
 			<id>sonatype-nexus</id>
 			<name>Kundera Public Repository</name>
 			<url>https://oss.sonatype.org/content/repositories/releases</url>
+=======
+	<repositories>
+		<repository>
+			<id>neo4j-release-repository</id>
+			<name>Neo4j Maven 2 release repository</name>
+			<url>http://m2.neo4j.org/releases</url>
+>>>>>>> 3b0b92170a633bafd3806a6c59d25eb08841e671
 			<releases>
 				<enabled>true</enabled>
 			</releases>
@@ -150,6 +158,7 @@
 			</snapshots>
 		</repository>
 		<repository>
+<<<<<<< HEAD
 			<id>riptano</id>
 			<name>riptano</name>
 			<url>http://mvn.riptano.com/content/repositories/public</url>
@@ -166,4 +175,17 @@
 			</plugin>
 		</plugins>
 	</build>
+=======
+			<id>neo4j-snapshot-repository</id>
+			<name>Neo4j Maven 2 snapshot repository</name>
+			<url>http://m2.neo4j.org/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
+>>>>>>> 3b0b92170a633bafd3806a6c59d25eb08841e671
 </project>
