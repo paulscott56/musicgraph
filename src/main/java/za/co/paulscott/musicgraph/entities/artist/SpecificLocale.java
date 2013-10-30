@@ -9,32 +9,37 @@ public class SpecificLocale {
 	private LanguageCode langCode;
 	private Continent continent;
 	private Locale locale;
-	
+
 	public LanguageCode getLangCode() {
 		return langCode;
 	}
+
 	public void setLangCode(LanguageCode langCode) {
 		this.langCode = langCode;
 	}
+
 	public Continent getContinent() {
 		return continent;
 	}
+
 	public void setContinent(Continent continent) {
 		this.continent = continent;
 	}
+
 	public Locale getLocale() {
 		return locale;
 	}
+
 	public void setLocale(Locale locale) {
 		this.locale = locale;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "SpecificLocale [langCode=" + langCode + ", continent="
 				+ continent + ", locale=" + locale + "]";
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -46,7 +51,7 @@ public class SpecificLocale {
 		result = prime * result + ((locale == null) ? 0 : locale.hashCode());
 		return result;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

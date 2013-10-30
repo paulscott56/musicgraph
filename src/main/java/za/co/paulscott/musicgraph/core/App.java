@@ -12,8 +12,7 @@ public class App {
 
 	public static void main(String[] args) {
 
-		context = new AnnotationConfigApplicationContext(
-				AppConfig.class);
+		context = new AnnotationConfigApplicationContext(AppConfig.class);
 		HelloWorld obj = (HelloWorld) context.getBean("helloBean");
 
 		obj.printHelloWorld("Music lovers");

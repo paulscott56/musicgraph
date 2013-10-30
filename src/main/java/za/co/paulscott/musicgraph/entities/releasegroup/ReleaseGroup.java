@@ -49,9 +49,9 @@ public class ReleaseGroup {
 	 * represents, for example album, single, soundtrack, compilation etc.
 	 */
 	private ReleaseType releaseType;
-	
+
 	/**
-	 *  Disambiguation comment 
+	 * Disambiguation comment
 	 */
 	private DisambiguationComment comment;
 
@@ -99,6 +99,5 @@ public class ReleaseGroup {
 	public void setAnnotation(SimpleAnnotation annotation) {
 		this.annotation = annotation;
 	}
-	
-	
+
 }

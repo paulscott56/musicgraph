@@ -14,117 +14,114 @@ import za.co.paulscott.musicgraph.enums.ReleaseStatus;
 import za.co.paulscott.musicgraph.enums.ScriptType;
 
 /**
- * A MusicGraph release represents the unique release (i.e. issuing) of a product on a specific date 
- * with specific release information such as the country, label, barcode, packaging, etc. 
- * If you walk into a store and purchase an album or single, they're each represented in MusicGraph as one release.
+ * A MusicGraph release represents the unique release (i.e. issuing) of a
+ * product on a specific date with specific release information such as the
+ * country, label, barcode, packaging, etc. If you walk into a store and
+ * purchase an album or single, they're each represented in MusicGraph as one
+ * release.
  * 
- * Each release belongs to a release group and contains at least one medium 
- * (commonly referred to as a disc when talking about a CD release). Each medium has a tracklist.
+ * Each release belongs to a release group and contains at least one medium
+ * (commonly referred to as a disc when talking about a CD release). Each medium
+ * has a tracklist.
  * 
- * A medium is the actual physical medium the audio content is stored upon. 
- * This means that each CD in a multi-disc release will be entered as separate mediums within the release, 
- * and that both sides of a vinyl record or cassette will exist on one medium. 
- * Mediums have a format (e.g. CD, DVD, vinyl, cassette) and can optionally also have a title.
+ * A medium is the actual physical medium the audio content is stored upon. This
+ * means that each CD in a multi-disc release will be entered as separate
+ * mediums within the release, and that both sides of a vinyl record or cassette
+ * will exist on one medium. Mediums have a format (e.g. CD, DVD, vinyl,
+ * cassette) and can optionally also have a title.
  * 
- * Tracklists represent the set and ordering of tracks as listed on a liner, 
- * and the same tracklist can appear on more than one release. 
- * For example, a boxset compilation that contains previously released CDs would share the same 
+ * Tracklists represent the set and ordering of tracks as listed on a liner, and
+ * the same tracklist can appear on more than one release. For example, a boxset
+ * compilation that contains previously released CDs would share the same
  * tracklists as the separate releases.
- *  
+ * 
  * @author paul
- *
+ * 
  */
 public class Release {
-	
+
 	/**
-	 *  Title
-	 *  The title of the release.
+	 * Title The title of the release.
 	 */
 	private String title;
-	
+
 	/**
-	 * Artist
-	 * The artist(s) that the release is primarily credited to, as credited on the release.
+	 * Artist The artist(s) that the release is primarily credited to, as
+	 * credited on the release.
 	 */
 	private Artist artist;
-	
+
 	/**
-	 * Date
-	 * The date the release was issued.
+	 * Date The date the release was issued.
 	 */
 	private Date releaseDate;
-	
+
 	/**
-	 * Country
-	 * The country the release was issued in.
+	 * Country The country the release was issued in.
 	 */
 	private Country country;
-	
+
 	/**
-	 * Label
-	 * The label which issued the release. There may be more than one.
+	 * Label The label which issued the release. There may be more than one.
 	 */
 	private MusicLabel label;
-	
+
 	/**
-	 * Catalogue number
-	 * This is a number assigned to the release by the label which can often be found on the spine or near the barcode. 
-	 * There may be more than one, especially when multiple labels are involved. 
-	 * This is not the ASIN — there is a relationship for that — nor the label code.
+	 * Catalogue number This is a number assigned to the release by the label
+	 * which can often be found on the spine or near the barcode. There may be
+	 * more than one, especially when multiple labels are involved. This is not
+	 * the ASIN — there is a relationship for that — nor the label code.
 	 */
 	private Set<String> catalogueNumber;
-	
+
 	/**
-	 * Barcode
-	 * The barcode, if the release has one. The most common types found on releases are 12-digit UPCs and 13-digit EANs.
+	 * Barcode The barcode, if the release has one. The most common types found
+	 * on releases are 12-digit UPCs and 13-digit EANs.
 	 */
 	private long barcode;
-	
+
 	/**
-	 * Status
-	 * The status describes how "official" a release is. Possible values are:
-	 * official
-	 * Any release officially sanctioned by the artist and/or their record company. Most releases will fit into this category.
-	 * promotional
-	 * A give-away release or a release intended to promote an upcoming official release 
-	 * (e.g. pre-release versions, releases included with a magazine, versions supplied to radio DJs for air-play).
-	 * bootleg
-	 * An unofficial/underground release that was not sanctioned by the artist and/or the record company. 
-	 * This includes unofficial live recordings and pirated releases.
-	 * pseudo-release
-	 * An alternate version of a release where the titles have been changed. 
-	 * These don't correspond to any real release and should be linked to the original release using the 
-	 * transl(iter)ation relationship.
+	 * Status The status describes how "official" a release is. Possible values
+	 * are: official Any release officially sanctioned by the artist and/or
+	 * their record company. Most releases will fit into this category.
+	 * promotional A give-away release or a release intended to promote an
+	 * upcoming official release (e.g. pre-release versions, releases included
+	 * with a magazine, versions supplied to radio DJs for air-play). bootleg An
+	 * unofficial/underground release that was not sanctioned by the artist
+	 * and/or the record company. This includes unofficial live recordings and
+	 * pirated releases. pseudo-release An alternate version of a release where
+	 * the titles have been changed. These don't correspond to any real release
+	 * and should be linked to the original release using the transl(iter)ation
+	 * relationship.
 	 */
 	private ReleaseStatus status;
-	
+
 	/**
-	 * Packaging
-	 * The physical packaging that accompanies the release. See the list of packaging for more information.
+	 * Packaging The physical packaging that accompanies the release. See the
+	 * list of packaging for more information.
 	 */
 	private ReleasePackaging packaging;
-	
+
 	/**
-	 * Language
-	 * The language a release's track list is written in. The possible values are taken from the ISO 639-3 standard.
+	 * Language The language a release's track list is written in. The possible
+	 * values are taken from the ISO 639-3 standard.
 	 */
 	private LanguageCode language;
-	
+
 	/**
-	 * Script
-	 * The script used to write the release's track list. The possible values are taken from the ISO 15924 standard.
-	 * See ScriptType
+	 * Script The script used to write the release's track list. The possible
+	 * values are taken from the ISO 15924 standard. See ScriptType
 	 */
 	private ScriptType scriptType;
-	
+
 	/**
 	 * Disambiguation comment
 	 */
 	private DisambiguationComment comment;
-	
+
 	/**
 	 * Annotation
-	 */ 
+	 */
 	private SimpleAnnotation annotation;
 
 	public String getTitle() {

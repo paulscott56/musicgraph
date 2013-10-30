@@ -62,22 +62,24 @@ public class PropertiesLoader {
 
 	}
 
-	private Set<String> resolveClasspathResources(String[] activeProfiles, String classpathProperties) {
+	private Set<String> resolveClasspathResources(String[] activeProfiles,
+			String classpathProperties) {
 
-            Set<String> classpathResources = new HashSet<>();
+		Set<String> classpathResources = new HashSet<>();
 
-            if (activeProfiles.length == 0) {
-                    classpathResources.add(DEFAULT_PROFILE + "_" + classpathProperties);
-                    return classpathResources;
-            }
+		if (activeProfiles.length == 0) {
+			classpathResources.add(DEFAULT_PROFILE + "_" + classpathProperties);
+			return classpathResources;
+		}
 
-            for (String profile : activeProfiles) {
-                    String resourcePath = profile.toLowerCase() + "_" + classpathProperties;
-                    classpathResources.add(resourcePath);
-            }
+		for (String profile : activeProfiles) {
+			String resourcePath = profile.toLowerCase() + "_"
+					+ classpathProperties;
+			classpathResources.add(resourcePath);
+		}
 
-            return classpathResources;
-    }
+		return classpathResources;
+	}
 
 	private void loadPropertiesFromFile(ConfigurableEnvironment env, String file) {
 

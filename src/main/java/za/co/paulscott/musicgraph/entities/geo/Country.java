@@ -12,55 +12,42 @@ import za.co.paulscott.musicgraph.enums.Locale;
  */
 public class Country {
 
-
 	private int id;
 
-	
 	private Locale isoCode;
-	
-	
+
 	private String iso3Code;
-	
-	
+
 	private int isoNumericCode;
-	
-	
+
 	private String fips;
-	
-	
+
 	private String country;
-	
-	
+
 	private String capital;
-	
-	
+
 	private int area; // (in sq km)
-	
-	
+
 	private int population;
-	
-	
+
 	private String continent;
-	
-	
+
 	private String tld;
-	
-	
+
 	private String currencyCode;
-	
-	
+
 	private String currencyName;
-	
+
 	private String phone;
-	
+
 	private String postalCodeFormat;
-	
+
 	private String postalCodeRegex;
-	
+
 	private String languages;
-	
+
 	private String neighbours;
-	
+
 	private String equivalentFipsCode;
 
 	public Locale getIsoCode() {
