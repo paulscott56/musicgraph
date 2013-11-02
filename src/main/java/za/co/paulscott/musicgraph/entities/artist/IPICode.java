@@ -1,5 +1,7 @@
 package za.co.paulscott.musicgraph.entities.artist;
 
+import org.springframework.data.neo4j.annotation.NodeEntity;
+
 import za.co.paulscott.musicgraph.entities.shared.ISWCCode;
 
 /**
@@ -17,6 +19,7 @@ import za.co.paulscott.musicgraph.entities.shared.ISWCCode;
  * @author paul
  * 
  */
+@NodeEntity
 public class IPICode {
 
 	private int IPICode;

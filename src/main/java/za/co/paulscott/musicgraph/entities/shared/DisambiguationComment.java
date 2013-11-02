@@ -1,5 +1,7 @@
 package za.co.paulscott.musicgraph.entities.shared;
 
+import org.springframework.data.neo4j.annotation.NodeEntity;
+
 /**
  * The disambiguation comments are fields in the database used to help
  * distinguish identically named artists, labels and other entities. They are
@@ -30,6 +32,7 @@ package za.co.paulscott.musicgraph.entities.shared;
  * @author paul
  * 
  */
+@NodeEntity
 public class DisambiguationComment {
 
 	private String comment;

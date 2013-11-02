@@ -1,9 +1,12 @@
 package za.co.paulscott.musicgraph.entities.artist;
 
+import org.springframework.data.neo4j.annotation.NodeEntity;
+
 import za.co.paulscott.musicgraph.enums.Continent;
 import za.co.paulscott.musicgraph.enums.LanguageCode;
 import za.co.paulscott.musicgraph.enums.Locale;
 
+@NodeEntity
 public class SpecificLocale {
 
 	private LanguageCode langCode;

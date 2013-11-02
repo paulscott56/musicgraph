@@ -1,5 +1,7 @@
 package za.co.paulscott.musicgraph.entities.artist;
 
+import org.springframework.data.neo4j.annotation.NodeEntity;
+
 import za.co.paulscott.musicgraph.enums.ArtistAliasType;
 
 /**
@@ -82,6 +84,7 @@ import za.co.paulscott.musicgraph.enums.ArtistAliasType;
  * @author paul
  * 
  */
+@NodeEntity
 public class ArtistAlias {
 
 	private String alias;

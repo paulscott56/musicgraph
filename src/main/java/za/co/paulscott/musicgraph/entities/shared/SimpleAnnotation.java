@@ -1,5 +1,7 @@
 package za.co.paulscott.musicgraph.entities.shared;
 
+import org.springframework.data.neo4j.annotation.NodeEntity;
+
 import za.co.paulscott.musicgraph.enums.AnnotationType;
 
 /**
@@ -41,6 +43,7 @@ import za.co.paulscott.musicgraph.enums.AnnotationType;
  * @author paul
  * 
  */
+@NodeEntity
 public class SimpleAnnotation {
 
 	private String annotation;

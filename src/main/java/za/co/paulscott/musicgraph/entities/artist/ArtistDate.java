@@ -2,6 +2,8 @@ package za.co.paulscott.musicgraph.entities.artist;
 
 import java.util.Date;
 
+import org.springframework.data.neo4j.annotation.NodeEntity;
+
 /**
  * For artists The begin and end dates indicate when an artist started and
  * finished its existence. Its exact meaning depends on the type of artist:
@@ -60,6 +62,7 @@ import java.util.Date;
  * @author paul
  * 
  */
+@NodeEntity
 public class ArtistDate {
 
 	private Date beginDate;

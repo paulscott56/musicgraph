@@ -2,6 +2,8 @@ package za.co.paulscott.musicgraph.entities.shared;
 
 import java.util.Set;
 
+import org.springframework.data.neo4j.annotation.NodeEntity;
+
 /**
  * The International Standard Musical Work Code (ISWC)
  * 
@@ -16,6 +18,7 @@ import java.util.Set;
  * @author paul
  * 
  */
+@NodeEntity
 public class ISWCCode {
 
 	private String title;

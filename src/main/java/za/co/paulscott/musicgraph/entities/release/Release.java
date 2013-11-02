@@ -3,6 +3,8 @@ package za.co.paulscott.musicgraph.entities.release;
 import java.util.Date;
 import java.util.Set;
 
+import org.springframework.data.neo4j.annotation.NodeEntity;
+
 import za.co.paulscott.musicgraph.entities.artist.Artist;
 import za.co.paulscott.musicgraph.entities.geo.Country;
 import za.co.paulscott.musicgraph.entities.label.MusicLabel;
@@ -38,6 +40,7 @@ import za.co.paulscott.musicgraph.enums.ScriptType;
  * @author paul
  * 
  */
+@NodeEntity
 public class Release {
 
 	/**

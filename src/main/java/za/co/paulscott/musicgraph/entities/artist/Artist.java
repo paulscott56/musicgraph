@@ -2,6 +2,10 @@ package za.co.paulscott.musicgraph.entities.artist;
 
 import java.util.Set;
 
+import org.springframework.data.neo4j.annotation.GraphId;
+import org.springframework.data.neo4j.annotation.Indexed;
+import org.springframework.data.neo4j.annotation.NodeEntity;
+
 import za.co.paulscott.musicgraph.entities.geo.Country;
 import za.co.paulscott.musicgraph.entities.shared.SimpleAnnotation;
 import za.co.paulscott.musicgraph.entities.shared.DisambiguationComment;
@@ -66,21 +70,39 @@ import za.co.paulscott.musicgraph.enums.Gender;
  * @author paul
  * 
  */
-public class Artist {
 
+@NodeEntity
+public class Artist {
+	
+	@GraphId
+    private Long id;
+
+	@Indexed
 	private String artistName;
+	
 	private String legalName;
+	
 	private Set<String> performanceName;
+	
 	private String sortName;
+	
 	private ArtistType type;
+	
 	private Gender gender;
+	
+	@Indexed
 	private Country country;
+	
 	private ArtistDate beginDate;
+	
 	private ArtistDate endDate;
+	
 	private IPICode ipiCode;
+	
 	private Set<ArtistAlias> alias;
-	private String mbId;
+	
 	private DisambiguationComment disAmbComment;
+	
 	private SimpleAnnotation annotation;
 
 	public String getArtistName() {
@@ -161,14 +183,6 @@ public class Artist {
 
 	public void setIpiCode(IPICode ipiCode) {
 		this.ipiCode = ipiCode;
-	}
-
-	public String getMbId() {
-		return mbId;
-	}
-
-	public void setMbId(String mbId) {
-		this.mbId = mbId;
 	}
 
 	public DisambiguationComment getDisAmbComment() {

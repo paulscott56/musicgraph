@@ -1,5 +1,7 @@
 package za.co.paulscott.musicgraph.entities.geo;
 
+import org.springframework.data.neo4j.annotation.NodeEntity;
+
 import za.co.paulscott.musicgraph.enums.Locale;
 
 /**
@@ -10,6 +12,7 @@ import za.co.paulscott.musicgraph.enums.Locale;
  * @author paul
  * 
  */
+@NodeEntity
 public class Country {
 
 	private int id;

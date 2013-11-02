@@ -3,6 +3,8 @@ package za.co.paulscott.musicgraph.entities.label;
 import java.util.Date;
 import java.util.Set;
 
+import org.springframework.data.neo4j.annotation.NodeEntity;
+
 import za.co.paulscott.musicgraph.entities.geo.Country;
 import za.co.paulscott.musicgraph.entities.shared.DisambiguationComment;
 import za.co.paulscott.musicgraph.entities.shared.SimpleAnnotation;
@@ -48,6 +50,7 @@ import za.co.paulscott.musicgraph.enums.LabelStatus;
  * @author paul
  * 
  */
+@NodeEntity
 public class MusicLabel {
 	/**
 	 * Name The official name of the label. The label name should be represented
