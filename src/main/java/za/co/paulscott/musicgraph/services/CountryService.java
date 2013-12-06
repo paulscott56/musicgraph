@@ -1,4 +1,4 @@
-package za.co.paulscott.musicgraph.services.country;
+package za.co.paulscott.musicgraph.services;
 
 import org.springframework.stereotype.Service;
 
