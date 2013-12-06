@@ -1,9 +1,13 @@
 package za.co.paulscott.musicgraph.repos;
 
 import org.springframework.data.neo4j.repository.GraphRepository;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-import za.co.paulscott.musicgraph.entities.shared.ISWCCode;
+import za.co.paulscott.musicgraph.entities.ISWCCode;
 
+@Repository
+@Transactional
 public interface ISWCCodeRepository extends GraphRepository<ISWCCode> {
 
 }

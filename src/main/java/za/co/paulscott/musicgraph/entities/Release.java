@@ -1,15 +1,10 @@
-package za.co.paulscott.musicgraph.entities.release;
+package za.co.paulscott.musicgraph.entities;
 
 import java.util.Date;
 import java.util.Set;
 
 import org.springframework.data.neo4j.annotation.NodeEntity;
 
-import za.co.paulscott.musicgraph.entities.artist.Artist;
-import za.co.paulscott.musicgraph.entities.geo.Country;
-import za.co.paulscott.musicgraph.entities.label.MusicLabel;
-import za.co.paulscott.musicgraph.entities.shared.DisambiguationComment;
-import za.co.paulscott.musicgraph.entities.shared.SimpleAnnotation;
 import za.co.paulscott.musicgraph.enums.LanguageCode;
 import za.co.paulscott.musicgraph.enums.ReleasePackaging;
 import za.co.paulscott.musicgraph.enums.ReleaseStatus;
@@ -62,7 +57,7 @@ public class Release {
 	/**
 	 * Country The country the release was issued in.
 	 */
-	private Country country;
+	private CountryEntity country;
 
 	/**
 	 * Label The label which issued the release. There may be more than one.
@@ -151,11 +146,11 @@ public class Release {
 		this.releaseDate = releaseDate;
 	}
 
-	public Country getCountry() {
+	public CountryEntity getCountry() {
 		return country;
 	}
 
-	public void setCountry(Country country) {
+	public void setCountry(CountryEntity country) {
 		this.country = country;
 	}
 

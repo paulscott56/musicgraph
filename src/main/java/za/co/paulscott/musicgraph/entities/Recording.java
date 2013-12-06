@@ -1,10 +1,6 @@
-package za.co.paulscott.musicgraph.entities.recording;
+package za.co.paulscott.musicgraph.entities;
 
 import org.springframework.data.neo4j.annotation.NodeEntity;
-
-import za.co.paulscott.musicgraph.entities.artist.Artist;
-import za.co.paulscott.musicgraph.entities.shared.DisambiguationComment;
-import za.co.paulscott.musicgraph.entities.shared.SimpleAnnotation;
 
 /**
  * A recording is an entity in MusicGraph which can be linked to tracks on

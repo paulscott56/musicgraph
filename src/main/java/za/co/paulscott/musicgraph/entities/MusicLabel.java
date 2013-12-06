@@ -1,13 +1,10 @@
-package za.co.paulscott.musicgraph.entities.label;
+package za.co.paulscott.musicgraph.entities;
 
 import java.util.Date;
 import java.util.Set;
 
 import org.springframework.data.neo4j.annotation.NodeEntity;
 
-import za.co.paulscott.musicgraph.entities.geo.Country;
-import za.co.paulscott.musicgraph.entities.shared.DisambiguationComment;
-import za.co.paulscott.musicgraph.entities.shared.SimpleAnnotation;
 import za.co.paulscott.musicgraph.enums.LabelStatus;
 
 /**
@@ -110,7 +107,7 @@ public class MusicLabel {
 	/**
 	 * Country The country of origin for the label.
 	 */
-	private Country country;
+	private CountryEntity country;
 
 	/**
 	 * Disambiguation comment
@@ -178,11 +175,11 @@ public class MusicLabel {
 		this.endDate = endDate;
 	}
 
-	public Country getCountry() {
+	public CountryEntity getCountry() {
 		return country;
 	}
 
-	public void setCountry(Country country) {
+	public void setCountry(CountryEntity country) {
 		this.country = country;
 	}
 

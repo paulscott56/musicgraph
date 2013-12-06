@@ -1,4 +1,4 @@
-package za.co.paulscott.musicgraph.entities.artist;
+package za.co.paulscott.musicgraph.entities;
 
 import java.util.Set;
 
@@ -6,9 +6,6 @@ import org.springframework.data.neo4j.annotation.GraphId;
 import org.springframework.data.neo4j.annotation.Indexed;
 import org.springframework.data.neo4j.annotation.NodeEntity;
 
-import za.co.paulscott.musicgraph.entities.geo.Country;
-import za.co.paulscott.musicgraph.entities.shared.SimpleAnnotation;
-import za.co.paulscott.musicgraph.entities.shared.DisambiguationComment;
 import za.co.paulscott.musicgraph.enums.ArtistType;
 import za.co.paulscott.musicgraph.enums.Gender;
 
@@ -91,7 +88,7 @@ public class Artist {
 	private Gender gender;
 	
 	@Indexed
-	private Country country;
+	private CountryEntity country;
 	
 	private ArtistDate beginDate;
 	
@@ -153,11 +150,11 @@ public class Artist {
 		this.gender = gender;
 	}
 
-	public Country getCountry() {
+	public CountryEntity getCountry() {
 		return country;
 	}
 
-	public void setCountry(Country country) {
+	public void setCountry(CountryEntity country) {
 		this.country = country;
 	}
 

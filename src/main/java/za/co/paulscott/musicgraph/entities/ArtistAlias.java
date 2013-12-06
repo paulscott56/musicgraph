@@ -1,4 +1,4 @@
-package za.co.paulscott.musicgraph.entities.artist;
+package za.co.paulscott.musicgraph.entities;
 
 import org.springframework.data.neo4j.annotation.NodeEntity;
 

@@ -1,4 +1,4 @@
-package za.co.paulscott.musicgraph.hello;
+package za.co.paulscott.musicgraph.iface;
 
 public interface HelloWorld {
 

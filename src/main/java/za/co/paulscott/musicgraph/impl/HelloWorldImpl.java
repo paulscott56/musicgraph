@@ -1,6 +1,6 @@
-package za.co.paulscott.musicgraph.hello.impl;
+package za.co.paulscott.musicgraph.impl;
 
-import za.co.paulscott.musicgraph.hello.HelloWorld;
+import za.co.paulscott.musicgraph.iface.HelloWorld;
 
 public class HelloWorldImpl implements HelloWorld {
 

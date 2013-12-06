@@ -1,4 +1,4 @@
-package za.co.paulscott.musicgraph.entities.shared;
+package za.co.paulscott.musicgraph.entities;
 
 import java.util.Set;
 

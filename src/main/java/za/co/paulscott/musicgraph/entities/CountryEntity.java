@@ -1,6 +1,9 @@
-package za.co.paulscott.musicgraph.entities.geo;
+package za.co.paulscott.musicgraph.entities;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.neo4j.annotation.GraphId;
 import org.springframework.data.neo4j.annotation.NodeEntity;
+import org.springframework.data.neo4j.aspects.support.node.Neo4jNodeBacking;
 
 import za.co.paulscott.musicgraph.enums.Locale;
 
@@ -13,9 +16,10 @@ import za.co.paulscott.musicgraph.enums.Locale;
  * 
  */
 @NodeEntity
-public class Country {
+public class CountryEntity {
 
-	private int id;
+	@GraphId
+	private Long id;
 
 	private Locale isoCode;
 
@@ -33,6 +37,7 @@ public class Country {
 
 	private int population;
 
+	
 	private String continent;
 
 	private String tld;
@@ -197,11 +202,30 @@ public class Country {
 		this.equivalentFipsCode = equivalentFipsCode;
 	}
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Country [id=" + id + ", isoCode=" + isoCode + ", iso3Code="
+				+ iso3Code + ", isoNumericCode=" + isoNumericCode + ", fips="
+				+ fips + ", country=" + country + ", capital=" + capital
+				+ ", area=" + area + ", population=" + population
+				+ ", continent=" + continent + ", tld=" + tld
+				+ ", currencyCode=" + currencyCode + ", currencyName="
+				+ currencyName + ", phone=" + phone + ", postalCodeFormat="
+				+ postalCodeFormat + ", postalCodeRegex=" + postalCodeRegex
+				+ ", languages=" + languages + ", neighbours=" + neighbours
+				+ ", equivalentFipsCode=" + equivalentFipsCode + "]";
+	}
+	
+	
 }

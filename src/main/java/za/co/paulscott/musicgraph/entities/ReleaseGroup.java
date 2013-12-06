@@ -1,10 +1,7 @@
-package za.co.paulscott.musicgraph.entities.releasegroup;
+package za.co.paulscott.musicgraph.entities;
 
 import org.springframework.data.neo4j.annotation.NodeEntity;
 
-import za.co.paulscott.musicgraph.entities.artist.Artist;
-import za.co.paulscott.musicgraph.entities.shared.SimpleAnnotation;
-import za.co.paulscott.musicgraph.entities.shared.DisambiguationComment;
 import za.co.paulscott.musicgraph.enums.ReleaseType;
 
 /**

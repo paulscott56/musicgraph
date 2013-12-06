@@ -1,12 +1,8 @@
-package za.co.paulscott.musicgraph.entities.work;
+package za.co.paulscott.musicgraph.entities;
 
 import java.util.Set;
 
 import org.springframework.data.neo4j.annotation.NodeEntity;
-
-import za.co.paulscott.musicgraph.entities.shared.DisambiguationComment;
-import za.co.paulscott.musicgraph.entities.shared.ISWCCode;
-import za.co.paulscott.musicgraph.entities.shared.SimpleAnnotation;
 
 /**
  * In MusicGraph terminology, a work is a distinct intellectual or artistic

@@ -26,7 +26,7 @@
 		<!-- Test -->
 		<junit.version>4.11</junit.version>
 
-		<spring-data-neo4j.version>2.2.0.BUILD-SNAPSHOT</spring-data-neo4j.version>
+		<spring-data-neo4j.version>2.3.2.RELEASE</spring-data-neo4j.version>
 
 	</properties>
 
@@ -124,14 +124,26 @@
 			<version>${spring-framework.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-neo4j</artifactId>
-			<version>2.3.2.RELEASE</version>
-		</dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-neo4j-aspects</artifactId>
+            <version>${spring-data-neo4j.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.hibernate.javax.persistence</groupId>
+                    <artifactId>hibernate-jpa-2.0-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-neo4j-rest</artifactId>
-			<version>2.3.2.RELEASE</version>
+			<version>${spring-data-neo4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>aspectj-maven-plugin</artifactId>
+			<version>1.2</version>
+			<type>maven-plugin</type>
 		</dependency>
 	</dependencies>
 

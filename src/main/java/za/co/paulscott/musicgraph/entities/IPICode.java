@@ -1,8 +1,6 @@
-package za.co.paulscott.musicgraph.entities.artist;
+package za.co.paulscott.musicgraph.entities;
 
 import org.springframework.data.neo4j.annotation.NodeEntity;
-
-import za.co.paulscott.musicgraph.entities.shared.ISWCCode;
 
 /**
  * The Interested Parties Information Code (IPI) is an identifying number
