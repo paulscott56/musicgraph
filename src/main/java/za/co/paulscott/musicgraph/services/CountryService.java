@@ -32,7 +32,7 @@ public class CountryService {
 	
 	
 
-	public void saveCountry(CountryEntity country) {
+	public void saveCountry() {
 		Transaction tx = graphDb.beginTx();
 		try {
 			Node firstNode = graphDb.createNode();
@@ -45,6 +45,10 @@ public class CountryService {
 			relationship.setProperty( "message", "brave Neo4j" );
 			tx.success();
 			
+			CountryEntity country = new CountryEntity();
+			country.setId((long) 1);
+			country.setContinent("Africa");
+			country.setCountry("South Africa");
 			countryRepo.save(country);
 		} finally {
 			tx.finish();

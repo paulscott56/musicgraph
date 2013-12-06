@@ -1,11 +1,14 @@
 package za.co.paulscott.musicgraph.config;
 
+import javax.transaction.TransactionManager;
+
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.neo4j.config.EnableNeo4jRepositories;
 import org.springframework.data.neo4j.config.Neo4jConfiguration;
 import org.springframework.data.neo4j.rest.SpringRestGraphDatabase;
+import org.springframework.transaction.jta.JtaTransactionManager;
 
 import za.co.paulscott.musicgraph.iface.HelloWorld;
 import za.co.paulscott.musicgraph.impl.CountryImpl;
@@ -27,9 +30,9 @@ public class AppConfig extends Neo4jConfiguration {
 		return new HelloWorldImpl();
 	}
 
-	@Bean(name= "countryImpl")
-	public CountryImpl countryImpl() {
-		return new CountryImpl();
+	@Bean
+	public JtaTransactionManager transactionManager() {
+		return new JtaTransactionManager();
 	}
 	
 	@Bean(name="countryService")

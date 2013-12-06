@@ -22,11 +22,8 @@ public class App {
 		obj.printHelloWorld("Music lovers");
 		
 		CountryService cs = (CountryService) context.getBean("countryService");
-		CountryEntity country = new CountryEntity();
-		country.setId((long) 1);
-		country.setContinent("Africa");
-		country.setCountry("South Africa");
-		cs.saveCountry(country);
+		
+		cs.saveCountry();
 
 	}
 
