@@ -1,11 +1,7 @@
 package za.co.paulscott.musicgraph.entities;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.neo4j.annotation.GraphId;
 import org.springframework.data.neo4j.annotation.NodeEntity;
-import org.springframework.data.neo4j.aspects.support.node.Neo4jNodeBacking;
-
-import za.co.paulscott.musicgraph.enums.Locale;
 
 /**
  * A country should be a node, with all places in that country as sub nodes.
@@ -21,7 +17,7 @@ public class CountryEntity {
 	@GraphId
 	private Long id;
 
-	private Locale isoCode;
+	//private Locale isoCode;
 
 	private String iso3Code;
 
@@ -58,13 +54,13 @@ public class CountryEntity {
 
 	private String equivalentFipsCode;
 
-	public Locale getIsoCode() {
-		return isoCode;
-	}
-
-	public void setIsoCode(Locale isoCode) {
-		this.isoCode = isoCode;
-	}
+//	public Locale getIsoCode() {
+//		return isoCode;
+//	}
+//
+//	public void setIsoCode(Locale isoCode) {
+//		this.isoCode = isoCode;
+//	}
 
 	public String getIso3Code() {
 		return iso3Code;
@@ -211,21 +207,140 @@ public class CountryEntity {
 	}
 
 	/* (non-Javadoc)
-	 * @see java.lang.Object#toString()
+	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
-	public String toString() {
-		return "Country [id=" + id + ", isoCode=" + isoCode + ", iso3Code="
-				+ iso3Code + ", isoNumericCode=" + isoNumericCode + ", fips="
-				+ fips + ", country=" + country + ", capital=" + capital
-				+ ", area=" + area + ", population=" + population
-				+ ", continent=" + continent + ", tld=" + tld
-				+ ", currencyCode=" + currencyCode + ", currencyName="
-				+ currencyName + ", phone=" + phone + ", postalCodeFormat="
-				+ postalCodeFormat + ", postalCodeRegex=" + postalCodeRegex
-				+ ", languages=" + languages + ", neighbours=" + neighbours
-				+ ", equivalentFipsCode=" + equivalentFipsCode + "]";
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + area;
+		result = prime * result + ((capital == null) ? 0 : capital.hashCode());
+		result = prime * result
+				+ ((continent == null) ? 0 : continent.hashCode());
+		result = prime * result + ((country == null) ? 0 : country.hashCode());
+		result = prime * result
+				+ ((currencyCode == null) ? 0 : currencyCode.hashCode());
+		result = prime * result
+				+ ((currencyName == null) ? 0 : currencyName.hashCode());
+		result = prime
+				* result
+				+ ((equivalentFipsCode == null) ? 0 : equivalentFipsCode
+						.hashCode());
+		result = prime * result + ((fips == null) ? 0 : fips.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result
+				+ ((iso3Code == null) ? 0 : iso3Code.hashCode());
+		result = prime * result + isoNumericCode;
+		result = prime * result
+				+ ((languages == null) ? 0 : languages.hashCode());
+		result = prime * result
+				+ ((neighbours == null) ? 0 : neighbours.hashCode());
+		result = prime * result + ((phone == null) ? 0 : phone.hashCode());
+		result = prime * result + population;
+		result = prime
+				* result
+				+ ((postalCodeFormat == null) ? 0 : postalCodeFormat.hashCode());
+		result = prime * result
+				+ ((postalCodeRegex == null) ? 0 : postalCodeRegex.hashCode());
+		result = prime * result + ((tld == null) ? 0 : tld.hashCode());
+		return result;
 	}
-	
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		CountryEntity other = (CountryEntity) obj;
+		if (area != other.area)
+			return false;
+		if (capital == null) {
+			if (other.capital != null)
+				return false;
+		} else if (!capital.equals(other.capital))
+			return false;
+		if (continent == null) {
+			if (other.continent != null)
+				return false;
+		} else if (!continent.equals(other.continent))
+			return false;
+		if (country == null) {
+			if (other.country != null)
+				return false;
+		} else if (!country.equals(other.country))
+			return false;
+		if (currencyCode == null) {
+			if (other.currencyCode != null)
+				return false;
+		} else if (!currencyCode.equals(other.currencyCode))
+			return false;
+		if (currencyName == null) {
+			if (other.currencyName != null)
+				return false;
+		} else if (!currencyName.equals(other.currencyName))
+			return false;
+		if (equivalentFipsCode == null) {
+			if (other.equivalentFipsCode != null)
+				return false;
+		} else if (!equivalentFipsCode.equals(other.equivalentFipsCode))
+			return false;
+		if (fips == null) {
+			if (other.fips != null)
+				return false;
+		} else if (!fips.equals(other.fips))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (iso3Code == null) {
+			if (other.iso3Code != null)
+				return false;
+		} else if (!iso3Code.equals(other.iso3Code))
+			return false;
+		if (isoNumericCode != other.isoNumericCode)
+			return false;
+		if (languages == null) {
+			if (other.languages != null)
+				return false;
+		} else if (!languages.equals(other.languages))
+			return false;
+		if (neighbours == null) {
+			if (other.neighbours != null)
+				return false;
+		} else if (!neighbours.equals(other.neighbours))
+			return false;
+		if (phone == null) {
+			if (other.phone != null)
+				return false;
+		} else if (!phone.equals(other.phone))
+			return false;
+		if (population != other.population)
+			return false;
+		if (postalCodeFormat == null) {
+			if (other.postalCodeFormat != null)
+				return false;
+		} else if (!postalCodeFormat.equals(other.postalCodeFormat))
+			return false;
+		if (postalCodeRegex == null) {
+			if (other.postalCodeRegex != null)
+				return false;
+		} else if (!postalCodeRegex.equals(other.postalCodeRegex))
+			return false;
+		if (tld == null) {
+			if (other.tld != null)
+				return false;
+		} else if (!tld.equals(other.tld))
+			return false;
+		return true;
+	}
+
 	
 }

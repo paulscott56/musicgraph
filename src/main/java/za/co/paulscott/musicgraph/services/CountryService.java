@@ -44,6 +44,8 @@ public class CountryService {
 				DynamicRelationshipType.withName("KNOWS"));
 			relationship.setProperty( "message", "brave Neo4j" );
 			tx.success();
+			
+			countryRepo.save(country);
 		} finally {
 			tx.finish();
 		}
