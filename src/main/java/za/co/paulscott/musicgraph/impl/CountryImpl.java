@@ -13,7 +13,7 @@ public class CountryImpl implements Country {
 
 	@Override
 	public void saveCountry(CountryEntity country) {
-		countryService.saveCountry();
+		countryService.saveCountry(country);
 		
 	}
 

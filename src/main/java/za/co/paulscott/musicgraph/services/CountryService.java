@@ -30,26 +30,33 @@ public class CountryService {
 	@Autowired
 	private GeoRepository countryRepo;
 	
-	
-
-	public void saveCountry() {
+	public long setupCountryNode() {
 		Transaction tx = graphDb.beginTx();
 		try {
-			Node firstNode = graphDb.createNode();
-			firstNode.setProperty( "message", "Hello, " );
-			Node secondNode = graphDb.createNode();
-			secondNode.setProperty( "message", "world!" );
-
-			Relationship relationship = firstNode.createRelationshipTo( secondNode,
-				DynamicRelationshipType.withName("KNOWS"));
-			relationship.setProperty( "message", "brave Neo4j" );
+			Node countryNode = graphDb.createNode();
+			countryNode.setProperty("name", "Countries");
+			template.findOne(countryNode.getId(), CountryEntity.class);
 			tx.success();
-			
-			CountryEntity country = new CountryEntity();
-			country.setId((long) 1);
-			country.setContinent("Africa");
-			country.setCountry("South Africa");
+			return countryNode.getId();
+		} finally {
+			tx.finish();
+		}
+	}
+	
+	public void getCountryRootNode() {
+		Transaction tx = graphDb.beginTx();
+//		try {
+//			Node countryNode = template.
+//		} finally {
+//			tx.finish();
+//		}
+	}
+
+	public void saveCountry(CountryEntity country) {
+		Transaction tx = graphDb.beginTx();
+		try {			
 			countryRepo.save(country);
+			tx.success();
 		} finally {
 			tx.finish();
 		}

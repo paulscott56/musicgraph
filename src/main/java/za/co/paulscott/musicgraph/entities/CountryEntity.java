@@ -1,7 +1,11 @@
 package za.co.paulscott.musicgraph.entities;
 
+import org.neo4j.graphdb.Direction;
 import org.springframework.data.neo4j.annotation.GraphId;
 import org.springframework.data.neo4j.annotation.NodeEntity;
+import org.springframework.data.neo4j.annotation.RelatedTo;
+
+import za.co.paulscott.musicgraph.enums.Locale;
 
 /**
  * A country should be a node, with all places in that country as sub nodes.
@@ -17,7 +21,7 @@ public class CountryEntity {
 	@GraphId
 	private Long id;
 
-	//private Locale isoCode;
+	private Locale isoCode;
 
 	private String iso3Code;
 
@@ -25,6 +29,7 @@ public class CountryEntity {
 
 	private String fips;
 
+	@RelatedTo(direction = Direction.INCOMING, type = "Countries")
 	private String country;
 
 	private String capital;
@@ -54,13 +59,13 @@ public class CountryEntity {
 
 	private String equivalentFipsCode;
 
-//	public Locale getIsoCode() {
-//		return isoCode;
-//	}
-//
-//	public void setIsoCode(Locale isoCode) {
-//		this.isoCode = isoCode;
-//	}
+	public Locale getIsoCode() {
+		return isoCode;
+	}
+
+	public void setIsoCode(Locale isoCode) {
+		this.isoCode = isoCode;
+	}
 
 	public String getIso3Code() {
 		return iso3Code;
